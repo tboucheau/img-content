@@ -18,11 +18,9 @@ const IndexPage = () => {
       reader.onload = async () => {
         const base64Data = reader.result.split(',')[1];
 
-        const response = await axios.post('https://u35wu41ksa.execute-api.eu-central-1.amazonaws.com/image-content', {
+        const response = await axios.post('https://34ux6exoga.execute-api.us-east-1.amazonaws.com/image-content', {
           image_bytes: base64Data
-        }, {
-  mode: 'no-cors'
-});
+        });
 
         setResponseData(response.data);
         
